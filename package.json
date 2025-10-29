@@ -1,4 +1,47 @@
 {
-  "name": "react-router-next-routes",
-  "packageManager": "yarn@4.9.2"
+  "name": "@martin.xyz/react-router-next",
+  "version": "0.0.2",
+  "description": "Next.JS File system routing for React Router",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc",
+    "test": "vitest"
+  },
+  "packageManager": "yarn@4.9.2",
+  "devDependencies": {
+    "@react-router/dev": "^7.9.4",
+    "@types/node": "^24.9.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.4"
+  },
+  "peerDependencies": {
+    "@react-router/dev": "^7.9.4",
+    "typescript": "^5.1.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "workspaces": [
+    "example"
+  ]
 }
